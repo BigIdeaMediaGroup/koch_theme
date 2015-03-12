@@ -41,6 +41,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+13.0 BIMG
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -881,4 +882,22 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+13.0 BIMG
+--------------------------------------------------------------*/
+
+/* Globals */
+.display-none {
+    display: none;
+}
+
+body {
+    background: url('images/red-flakes-repeating.png') repeat;
+}
+
+#masthead {
+    padding-top: 100px;
+    background: url('images/red-light-repeating.png') repeat-x;
 }
