@@ -1,9 +1,9 @@
 /*
-Theme Name: BIMG Base
+Theme Name: Koch Corporation
 Theme URI: http://underscores.me/
 Author: Big Idea Media Group
 Author URI: https://github.com/BigIdeaMediaGroup/
-Description: Base theme for BIMG projects
+Description: BIMG Custom Theme For Koch Corporation
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -889,15 +889,6 @@ object {
 --------------------------------------------------------------*/
 
 /* Globals */
-.display-none {
+.none {
     display: none;
-}
-
-body {
-    background: url('images/red-flakes-repeating.png') repeat;
-}
-
-#masthead {
-    padding-top: 100px;
-    background: url('images/red-light-repeating.png') repeat-x;
 }
