@@ -24,6 +24,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ----------------------------------------------------------------
 1.0 Normalize
 2.0 Typography
+	2.1 Fonts
 3.0 Elements
 4.0 Forms
 5.0 Navigation
@@ -42,15 +43,18 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	12.1 Captions
 	12.2 Galleries
 13.0 BIMG
+
+	
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: "Roboto Slab";
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
+	font-size: 62.5%;
 }
 
 body {
@@ -284,6 +288,8 @@ h4,
 h5,
 h6 {
 	clear: both;
+	font-family: "Oswald";
+	border-bottom: 1rem grey;
 }
 
 p {
@@ -341,6 +347,8 @@ ins {
 big {
 	font-size: 125%;
 }
+
+
 
 /*--------------------------------------------------------------
 3.0 Elements
@@ -886,9 +894,120 @@ object {
 
 /*--------------------------------------------------------------
 13.0 BIMG
+	13.1 Headers
+	13.2 Other Text Elements
+	13.3 Text Variables
+	13.4 Seperator
+	13.5 Overlays 
 --------------------------------------------------------------*/
 
-/* Globals */
-.none {
-    display: none;
+html{
+	font-size: 62.5%;
+	font-family: "Roboto Slab";
 }
+
+/* 13.1 Headers */
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Oswald";
+	padding-bottom: .25rem;
+	border-bottom: .1rem solid #cdcdcd;
+	display: inline-block;
+}
+
+h1 {
+	font-size: 40px;
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 35px;
+	font-size: 3.5rem;
+}
+
+h3 {
+	font-size: 30px;
+	font-size: 3rem;
+}
+
+h4 {
+	font-size: 25px;
+	font-size: 2.5rem;
+}
+
+h5 {
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+h6 {
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+/* 13.2 Other Text Elements */
+
+a {
+	color: #004990;
+}
+
+/* 13.3 Text Variables */
+
+.text-white {
+	color: #fff;
+}
+
+.text-grey {
+	color: #4b4b4b;
+}
+
+/* 13.4 Seperator */
+.separator {
+	width: 100%;
+	height: .6rem;
+	background-color: #004990;
+}
+
+/* 13.5 Overlays and Underlays */
+
+.overlay {
+	background-color: #252525;
+	width: 100%;
+}
+
+.image-underlay{
+	opacity: .2;
+}
+
+/* Menu Items */ 
+
+.nav-menu .page_item::after{
+	content: "|";
+}
+.nav-menu .page_item::last-of-type::after{
+	content: "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

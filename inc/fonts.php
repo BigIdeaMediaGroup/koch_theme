@@ -21,23 +21,23 @@ function theme_slug_fonts_url() {
      * supported by Lustria, translate this to 'off'. Do not translate into
      * your own language.
      */
-    $lustria = _x( 'on', 'Lustria font: on or off', 'theme-slug' );
+    $oswald = _x( 'on', 'Oswald font: on or off', 'theme-slug' );
 
     /* Translators: If there are characters in your language that are not
      * supported by Lato, translate this to 'off'. Do not translate into your
      * own language.
      */
-    $lato = _x( 'on', 'Lato font: on or off', 'theme-slug' );
+    $roboto = _x( 'on', 'Roboto font: on or off', 'theme-slug' );
 
-    if ( 'off' !== $lustria || 'off' !== $lato ) {
+    if ( 'off' !== $oswald || 'off' !== $lato ) {
         $font_families = array();
 
-        if ( 'off' !== $lustria ) {
-            $font_families[] = 'Lustria:400';
+        if ( 'off' !== $oswald ) {
+            $font_families[] = 'Oswald:400';
         }
 
-        if ( 'off' !== $lato ) {
-            $font_families[] = 'Lato:400,700,400italic';
+        if ( 'off' !== $roboto ) {
+            $font_families[] = 'Roboto Slab:400';
         }
 
         $query_args = array(
@@ -47,6 +47,8 @@ function theme_slug_fonts_url() {
 
         $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
     }
+    
+    
 
     return $fonts_url;
 }
