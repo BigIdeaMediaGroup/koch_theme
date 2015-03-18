@@ -46,7 +46,7 @@ function bimg_base_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -137,3 +137,26 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ *  * Load Google Fonts for theme.
+ *   */
+require get_template_directory() . '/inc/fonts.php';
+
+/**
+ *  * Load CMB2 metaboxes.
+ *   */
+require get_template_directory() . '/inc/cmb2.php';
+
+/**
+ *  * Load CMB Admin Options.
+ *   */
+require get_template_directory() . '/inc/theme-options-cmb.php';
+
+/**
+ *  * Bootstrap CMB2
+ *   */
+if ( file_exists(  __DIR__ . '/cmb2/init.php' ) ) {
+          require_once  __DIR__ . '/cmb2/init.php';
+} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
+          require_once  __DIR__ . '/CMB2/init.php';
+}
