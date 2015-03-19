@@ -33,11 +33,11 @@ function theme_slug_fonts_url() {
         $font_families = array();
 
         if ( 'off' !== $oswald ) {
-            $font_families[] = 'Oswald:400';
+            $font_families[] = 'Oswald:300';
         }
 
         if ( 'off' !== $roboto ) {
-            $font_families[] = 'Roboto Slab:400';
+            $font_families[] = 'Roboto Slab:300';
         }
 
         $query_args = array(

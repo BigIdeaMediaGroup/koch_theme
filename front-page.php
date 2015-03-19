@@ -6,19 +6,25 @@
  */
 
 get_header(); ?>
-
-	<?php echo do_shortcode('[bimg_slider id="" class=""]'); ?>
+	
+	<?php// echo do_shortcode('[bimg_slider id="" class="homepage-slider"]'); ?>
+	
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			
 			<?php while ( have_posts() ) : the_post();
-
-                global $post; ?>
-                
-            <hgroup>
-	            <h1><?php echo get_post_meta( $post->ID, '_bimg_home_intro_heading', true ); ?></h1>
-	            <h2 class="tagline"><?php echo get_post_meta( $post->ID, '_bimg_home_intro_subheading', true ); ?></h2>
-	        </hgroup>
+               global $post; ?>
+               
+               <div class="homepage-header">
+              <?php echo do_shortcode('[bimg_slider id="" class="homepage-slider"]'); ?>
+              <div class=" homepage-header-text">
+             	<hgroup class="content-width text-white content-width">
+	            	<h1><?php echo get_post_meta( $post->ID, '_bimg_home_intro_heading', true ); ?></h1>
+					<h2 class="tagline"><?php echo get_post_meta( $post->ID, '_bimg_home_intro_subheading', true ); ?></h2>
+				</hgroup>
+              </div>
+             
+               </div>
 
 	        <section class="intro">
 		        <p><?php echo get_post_meta( $post->ID, '_bimg_home_intro_summary', true ); ?></p>
