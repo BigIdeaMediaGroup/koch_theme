@@ -22,29 +22,29 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bimg-base' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-        <div itemscope itemtype="http://schema.org/Organization" class="site-contact">
-            <span itemprop="name" class="display-none">Christmas Decor</span>
-            Call Us Today! <span itemprop="telephone"></span>
-            <span itemprop="email"><?php bloginfo( 'admin_email' ) ?></span>
-        </div>
 		<div class="site-branding">
 			<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo"></a>
 		</div><!-- .site-branding -->
-        <div class="social-icons">
-        </div><!-- .social-icons -->
+    <div itemscope itemtype="http://schema.org/Organization" class="site-contact">
+    	<span itemprop="name" class="display-none">Koch Corporation</span>
+			<span itemprop="email"><a href="mailto:<?php echo bimg_get_option( 'email' ); ?>"><?php echo bimg_get_option( 'email' ); ?></a></span>
+      <span itemprop="telephone"><?php echo bimg_get_option( 'phone' ); ?></span>
+    </div><!-- .site-contact -->
+    <div class="social-icons">
+			<?php
+			$social_media = array( 'facebook', 'instagram', 'pinterest', 'twitter', );
+			foreach ( $social_media as $social ) {
+				if ( bimg_get_option( $social ) === 'true' ) {
+					echo '<a href="' . bimg_get_option( $social . '_url' ) . '">i</a>';
+				}
+			}
+			?>
+    </div><!-- .social-icons -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bimg-base' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-    <header class="site-header sticky-header">
-        <div class"site-branding">
-        </div><!-- .site-branding -->
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bimg-base' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-    </header>
 
 	<div id="content" class="site-content">

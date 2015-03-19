@@ -109,6 +109,8 @@ function bimg_base_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_style( 'bimg-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0' );
 }
 add_action( 'wp_enqueue_scripts', 'bimg_base_scripts' );
 
