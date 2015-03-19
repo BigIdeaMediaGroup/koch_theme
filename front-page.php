@@ -18,12 +18,11 @@ get_header(); ?>
                <div class="homepage-header">
               <?php echo do_shortcode('[bimg_slider id="" class="homepage-slider"]'); ?>
               <div class=" homepage-header-text">
-             	<hgroup class="content-width text-white content-width">
+             	<hgroup class="site-width text-white">
 	            	<h1><?php echo get_post_meta( $post->ID, '_bimg_home_intro_heading', true ); ?></h1>
 					<h2 class="tagline"><?php echo get_post_meta( $post->ID, '_bimg_home_intro_subheading', true ); ?></h2>
 				</hgroup>
               </div>
-             
                </div>
 
 	        <section class="intro">
