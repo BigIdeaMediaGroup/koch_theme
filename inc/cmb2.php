@@ -25,7 +25,7 @@ function bimg_register_home_intro_metabox() {
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
-		'show_on'      => array( 'id' => array( 1890, ) ), // Specific post IDs to display this metabox
+		'show_on'      => array( 'id' => array( 17, ) ), // Specific post IDs to display this metabox
 	) );
 
 	$bimg_home_intro->add_field( array(
@@ -60,7 +60,7 @@ function bimg_register_home_service_highlight_metabox() {
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
-		'show_on'      => array( 'id' => array( 1890, ) ), // Specific post IDs to display this metabox
+		'show_on'      => array( 'id' => array( 17, ) ), // Specific post IDs to display this metabox
 	) );
 
 	$bimg_home_service_highlight->add_field( array(
