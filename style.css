@@ -904,23 +904,24 @@ object {
 /*--------------------------------------------------------------
 13.0 BIMG
 	13.1 Global Assignments
-		13.01 Links
-		13.02 Headers
+		13.0.1 Links
+		13.0.2 Headers
 	13.2 Text Variables
 	13.3 Seperator
 	13.4 Overlay and Underlays
 	13.5 Menu 
+	13.6 Homepage
 --------------------------------------------------------------*/
 
 /* 13.1 Global Assignments */
 html{
 	font-size: 62.5%;
-	font-family: "Roboto Slab";
 }
 
 body {
 	font-size: 15px;
 	font-size: 1.5rem;
+	font-family: "Roboto Slab";
 }
 
 /* 13.01 Links */
@@ -940,41 +941,42 @@ h1,h2,h3,h4,h5,h6 {
 	padding-bottom: .25rem;
 	border-bottom: .1rem solid #cdcdcd;
 	display: inline-block;
+	font-weight: 200;
 }
 
 h1 {
+	font-size: 60px;
+	font-size: 6rem;
+}
+
+h2 {
+	font-size: 45px;
+	font-size: 4.5rem;
+}
+
+h3 {
 	font-size: 40px;
 	font-size: 4rem;
 }
 
-h2 {
+h4 {
 	font-size: 35px;
 	font-size: 3.5rem;
 }
 
-h3 {
-	font-size: 30px;
-	font-size: 3rem;
-}
-
-h4 {
-	font-size: 25px;
-	font-size: 2.5rem;
-}
-
 h5 {
-	font-size: 20px;
-	font-size: 2rem;
+	font-size: 30px;
+	font-size: 3.5rem;
 }
 
 h6 {
-	font-size: 15px;
-	font-size: 1.5rem;
+	font-size: 3.0px;
+	font-size: 3rem;
 }
 
 
 
-/* 13.2 Text Variables */
+/* 13.2 Variables */
 
 .text-white {
 	color: #fff;
@@ -982,6 +984,10 @@ h6 {
 
 .text-grey {
 	color: #4b4b4b;
+}
+
+.display-none {
+	display: none;
 }
 
 /* 13.3 Seperator */
@@ -992,14 +998,10 @@ h6 {
 }
 
 /* 13.4 Overlays and Underlays */
-
 .overlay {
-	background-color: #252525;
-	width: 100%;
-}
+	background-color: #262626;
 
-.image-underlay{
-	opacity: .2;
+	opacity: .8;
 }
 
 /* 13.5  Menu Items */ 
@@ -1012,6 +1014,7 @@ h6 {
 .nav-menu .page_item::after{
 	color: #2b2b2b;
 	margin: 0 20px;
+	margin: 0 2rem;
 	content: "|";
 }
 
@@ -1020,12 +1023,47 @@ h6 {
 }
 
 
+/* 13.6 Homepage */
 
+.content-width{
+	max-width: 1170px;
+	max-width: 117rem;
+	margin: 0 auto;
+	text-align: center;
+}
+.homepage-slider ul li{
+	background-position: center;
+	height: 620px;
+	height: 62rem;
+}
 
+.homepage-header-text {
+	bottom: 0;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.63);
+	width: 100%;
+	
+}
 
+.homepage-header {
+	position: relative;
+}
 
+.content-width h1 {
+	text-transform: uppercase;
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 12px;
+	margin-top: 1.2rem;
+}
 
-
+.content-width h2 {
+	font-family: "Roboto Slab";
+	font-size: 18px;
+	font-size: 1.8rem;
+	display: block;
+	border: none;
+}
 
 
 
