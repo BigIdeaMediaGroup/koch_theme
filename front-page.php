@@ -25,9 +25,9 @@ get_header(); ?>
               </div>
                </div>
 
-	        <section class="intro">
+	        <section class="intro site-width text-grey">
 		        <p><?php echo get_post_meta( $post->ID, '_bimg_home_intro_summary', true ); ?></p>
-		        <hr>
+		        <hr class="separator">
 		    </section>
 		    
 		    <section class="recent-projects">
