@@ -98,7 +98,7 @@ function bimg_register_home_service_highlight_metabox() {
 
 add_action( 'cmb2_init', 'bimg_register_about_description_metabox' );
 function bimg_register_about_description_metabox() {
-	$prefix = '_bimg_home_about_description_';
+	$prefix = '_bimg_about_description_';
 
 	$bimg_about = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
@@ -107,7 +107,7 @@ function bimg_register_about_description_metabox() {
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
-		'show_on'      => array( 'id' => array( 1899, ) ), // Specific post IDs to display this metabox
+		'show_on'      => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
 	) );
 
 	$bimg_about->add_field( array(
@@ -118,9 +118,15 @@ function bimg_register_about_description_metabox() {
 	) );
 
 	$bimg_about->add_field( array(
-		'name' => 'Description',
-		'id'   => $prefix . 'description',
+		'name' => 'Summary',
+		'id'   => $prefix . 'summary',
 		'type' => 'textarea',
+	) );
+
+	$bimg_about->add_field( array(
+		'name' => 'Quote',
+		'id'   => $prefix . 'quote',
+		'type' => 'text',
 	) );
 
 	$bimg_about->add_field( array(
@@ -142,7 +148,7 @@ function bimg_register_about_gallery_metabox() {
 		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true, // Show field names on the left
-		'show_on'      => array( 'id' => array( 1899, ) ), // Specific post IDs to display this metabox
+		'show_on'      => array( 'id' => array( 1786, ) ), // Specific post IDs to display this metabox
 	) );
 
 	$bimg_about_gallery_group = $bimg_about_gallery->add_field( array(
@@ -175,6 +181,42 @@ function bimg_register_about_gallery_metabox() {
 		'id'         => 'image',
 		'type'       => 'file',
 		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+	) );
+	
+}
+
+add_action( 'cmb2_init', 'bimg_register_about_minorities_metabox' );
+function bimg_register_about_minorities_metabox() {
+	$prefix = '_bimg_about_minorities_';
+
+	$bimg_about_minorities = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => 'Minority Affiliations',
+		'object_types' => array( 'page', ), // Post type
+		'context'      => 'normal',
+		'priority'     => 'high',
+		'show_names'   => true, // Show field names on the left
+		'show_on'      => array( 'id' => array( 1904, ) ), // Specific post IDs to display this metabox
+	) );
+	
+	$bimg_about_minorities->add_field( array(
+		'name' => 'Summary',
+		'id'   => $prefix . 'summary',
+		'type' => 'textarea',
+	) );
+	
+	$bimg_about_minorities->add_field( array(
+		'name' => 'Minorities',
+		'id'   => $prefix . 'minorities',
+		'type' => 'text',
+		'repeatable' => true,
+	) );
+	
+	$bimg_about_minorities->add_field( array(
+		'name' => 'NAICS Codes',
+		'id'   => $prefix . 'codes',
+		'type' => 'text',
+		'repeatable' => true,
 	) );
 	
 }
