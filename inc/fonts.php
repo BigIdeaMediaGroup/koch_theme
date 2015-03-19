@@ -37,7 +37,7 @@ function theme_slug_fonts_url() {
         }
 
         if ( 'off' !== $roboto ) {
-            $font_families[] = 'Roboto Slab:300';
+            $font_families[] = 'Roboto Slab:400,700,300,100';
         }
 
         $query_args = array(

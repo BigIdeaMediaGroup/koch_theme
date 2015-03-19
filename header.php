@@ -31,7 +31,7 @@
 			<span itemprop="email"><a href="mailto:<?php echo bimg_get_option( 'email' ); ?>"><?php echo bimg_get_option( 'email' ); ?></a></span>
 			<span itemprop="telephone"><?php echo bimg_get_option( 'phone' ); ?></span>
     	</div><!-- .site-contact -->
-			<div class="social-icons">
+			<div class="social-icons site-width">
 			<?php
 			$social_media = array( 'facebook', 'instagram', 'linkedin', 'pinterest', 'twitter', );
 			foreach ( $social_media as $social ) {
