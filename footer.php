@@ -18,6 +18,14 @@
 				</section>
 				<section>
 					<h1>Be Social With Koch</h1>
+					<?php
+					$social_networks = array( 'facebook', 'instagram', 'linkedin', 'pinterest', 'twitter', );
+					foreach ( $social_networks as $social ) {
+						if ( bimg_get_option($social) === 'true') {
+							echo '<a href="' . bimg_get_option( $social . '_url' ) . '"><i class="fa fa-' . $social . ' fa-2x"></i></a>';
+						}
+					}
+					?>
 				</section>
 			</div>
 			<section class="col span_1_of_3">
@@ -25,15 +33,33 @@
 				<address>
 					<h2><?php echo bimg_get_footer_option( 'location1' ); ?></h2>
 					<?php echo bimg_get_footer_option( 'address1' ); ?><br>
-					<?php echo bimg_get_footer_option( 'city1' ); . ', ' ?>
-					<?php echo bimg_get_footer_option( 'state1' ); . ' '?>
-					<?php echo bimg_get_footer_option( 'areacode' ); ?><br>
+					<?php echo bimg_get_footer_option( 'city1' ) . ', '; ?>
+					<?php echo bimg_get_footer_option( 'state1' ) . ' '; ?>
+					<?php echo bimg_get_footer_option( 'areacode1' ); ?><br>
 					<?php echo 'Telephone: + ' . bimg_get_footer_option( 'tel1' ); ?><br>
 					<?php echo 'Fax: + ' . bimg_get_footer_option( 'fax1' ); ?><br>
 					<?php echo 'Email: ' . '<a href="mailto:' . bimg_get_footer_option( 'address1' ) . '">' . bimg_get_footer_option( 'address1' ) . '</a>'; ?>
 				</address>
-				<address></address>
-				<address></address>
+				<address>
+					<h2><?php echo bimg_get_footer_option( 'location2' ); ?></h2>
+					<?php echo bimg_get_footer_option( 'address2' ); ?><br>
+					<?php echo bimg_get_footer_option( 'city2' ) . ', '; ?>
+					<?php echo bimg_get_footer_option( 'state2' ) . ' '; ?>
+					<?php echo bimg_get_footer_option( 'areacode2' ); ?><br>
+					<?php echo 'Telephone: + ' . bimg_get_footer_option( 'tel2' ); ?><br>
+					<?php echo 'Fax: + ' . bimg_get_footer_option( 'fax2' ); ?><br>
+					<?php echo 'Email: ' . '<a href="mailto:' . bimg_get_footer_option( 'address2' ) . '">' . bimg_get_footer_option( 'address2' ) . '</a>'; ?>
+				</address>
+				<address>
+					<h2><?php echo bimg_get_footer_option( 'location3' ); ?></h2>
+					<?php echo bimg_get_footer_option( 'address3' ); ?><br>
+					<?php echo bimg_get_footer_option( 'city3' ) . ', '; ?>
+					<?php echo bimg_get_footer_option( 'state3' ) . ' '; ?>
+					<?php echo bimg_get_footer_option( 'areacode' ); ?><br>
+					<?php echo 'Telephone: + ' . bimg_get_footer_option( 'tel3' ); ?><br>
+					<?php echo 'Fax: + ' . bimg_get_footer_option( 'fax3' ); ?><br>
+					<?php echo 'Email: ' . '<a href="mailto:' . bimg_get_footer_option( 'address3' ) . '">' . bimg_get_footer_option( 'address3' ) . '</a>'; ?>
+				</address>
 			</section>
 			<section class="col span_1_of_3">
 				<h1>Ready to talk about your project?</h1>

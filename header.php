@@ -32,7 +32,7 @@
     </div><!-- .site-contact -->
     <div class="social-icons">
 			<?php
-			$social_media = array( 'facebook', 'instagram', 'pinterest', 'twitter', );
+			$social_media = array( 'facebook', 'instagram', 'linkedin', 'pinterest', 'twitter', );
 			foreach ( $social_media as $social ) {
 				if ( bimg_get_option( $social ) === 'true' ) {
 					echo '<a href="' . bimg_get_option( $social . '_url' ) . '"><i class="fa fa-' . $social . ' fa-2x"></i></a>';

@@ -224,6 +224,30 @@ class bimg_Admin {
         ) );
 
         $siteOptions->add_field( array(
+            'name'    => 'LinkedIn',
+            'id'      => 'linkedin',
+            'type'    => 'radio_inline',
+            'options' => array(
+                'true'  => 'True',
+                'false' => 'False',
+            ),
+            'default' => 'false',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'LinkedIn URL',
+            'id'      => 'linkedin_url',
+            'type'    => 'text_url',
+            'protocols' => array( 'http', 'https', ),
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => '<hr>',
+            'id'      => 'break2',
+            'type'    => 'title',
+        ) );
+
+        $siteOptions->add_field( array(
             'name'    => 'Pinterest',
             'id'      => 'pinterest',
             'type'    => 'radio_inline',
@@ -243,7 +267,7 @@ class bimg_Admin {
 
         $siteOptions->add_field( array(
             'name'    => '<hr>',
-            'id'      => 'break2',
+            'id'      => 'break3',
             'type'    => 'title',
         ) );
 
@@ -267,7 +291,7 @@ class bimg_Admin {
 
         $siteOptions->add_field( array(
             'name'    => '<br>',
-            'id'      => 'break3',
+            'id'      => 'break4',
             'type'    => 'title',
         ) );
     }
