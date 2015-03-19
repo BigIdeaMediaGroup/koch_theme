@@ -26,7 +26,7 @@
 			<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo"></a>
 		</div><!-- .site-branding -->
     <div itemscope itemtype="http://schema.org/Organization" class="site-contact">
-    	<span itemprop="name" class="display-none">Koch Corporation</span>
+    	<span itemprop="name" class="display-none"><?php echo bimg_get_option( 'company' ); ?></span>
 			<span itemprop="email"><a href="mailto:<?php echo bimg_get_option( 'email' ); ?>"><?php echo bimg_get_option( 'email' ); ?></a></span>
       <span itemprop="telephone"><?php echo bimg_get_option( 'phone' ); ?></span>
     </div><!-- .site-contact -->
@@ -35,7 +35,7 @@
 			$social_media = array( 'facebook', 'instagram', 'pinterest', 'twitter', );
 			foreach ( $social_media as $social ) {
 				if ( bimg_get_option( $social ) === 'true' ) {
-					echo '<a href="' . bimg_get_option( $social . '_url' ) . '">i</a>';
+					echo '<a href="' . bimg_get_option( $social . '_url' ) . '"><i class="fa fa-' . $social . ' fa-2x"></i></a>';
 				}
 			}
 			?>

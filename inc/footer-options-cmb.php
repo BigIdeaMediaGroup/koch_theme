@@ -3,25 +3,25 @@
  * BIMG CMB2 Theme Options
  * @version 0.1.0
  */
-class bimg_Admin {
+class bimg_Footer {
 
     /**
      * Option key, and option page slug
      * @var string
      */
-    private $key = 'bimg_options';
+    private $key = 'bimg_footer_options';
 
     /**
      * Options page metabox id
      * @var string
      */
-    private $metabox_id = 'bimg_option_metabox';
+    private $metabox_id = 'bimg_footer_options_metabox';
 
     /**
      * Options Page title
      * @var string
      */
-    protected $title = 'Theme Options';
+    protected $title = 'Footer Options';
 
     /**
      * Options Page hook
@@ -35,7 +35,7 @@ class bimg_Admin {
      */
     public function __construct() {
         // Set our title
-        $this->title = 'Site Options';
+        $this->title = 'Footer Options';
     }
 
     /**
@@ -62,7 +62,7 @@ class bimg_Admin {
      * @since 0.1.0
      */
     public function add_options_page() {
-        $this->options_page = add_menu_page( $this->title, $this->title, 'manage_options', $this->key, array( $this, 'admin_page_display' ) );
+        $this->options_page = add_menu_page( $this->title, $this->title, 'manage_options', $this->key, array( $this, 'admin_page_display' ), 'dashicons-admin-generic', '99.1' );
     }
 
     /**
@@ -96,179 +96,198 @@ class bimg_Admin {
 
         // Set our CMB2 fields (EXAMPLE)
         $siteOptions->add_field( array(
-            'name'    => 'Company Name',
-            'id'      => 'company',
+            'name'    => '<h3>Column One</h3>',
+            'id'      => 'column1',
+            'type'    => 'title',
+        ) );
+
+        $siteOptions->add_field( array(
+      		'name' => 'Image',
+      		'desc' => 'Upload an image or enter a URL.<br>The image must be exactly 00 x 00 pixels.',
+      		'id'   => 'image',
+      		'type' => 'file',
+      	) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Description',
+            'desc'    => 'Keep your description close to the length of the default to preserve formatting.',
+            'id'      => 'description',
+            'type'    => 'textarea',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => '<h3>Column Two</h3>',
+            'id'      => 'column2',
+            'type'    => 'title',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Location 1',
+            'id'      => 'location1',
             'type'    => 'text',
-            'default' => 'Koch Corporation',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Address',
+            'id'      => 'address1',
+            'type'    => 'text',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'City',
+            'id'      => 'city1',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'State',
+            'id'      => 'state1',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Area Code',
+            'id'      => 'areacode1',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Telephone',
+            'id'      => 'tel1',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Fax',
+            'id'      => 'fax1',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Email',
+            'id'      => 'email1',
+            'type'    => 'text_email',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => '<hr>',
+            'id'      => 'split1',
+            'type'    => 'title',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Location 2',
+            'id'      => 'location2',
+            'type'    => 'text',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Address',
+            'id'      => 'address2',
+            'type'    => 'text',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'City',
+            'id'      => 'city2',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'State',
+            'id'      => 'state2',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Area Code',
+            'id'      => 'areacode2',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Telephone',
+            'id'      => 'tel2',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Fax',
+            'id'      => 'fax2',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Email',
+            'id'      => 'email2',
+            'type'    => 'text_email',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => '<hr>',
+            'id'      => 'split2',
+            'type'    => 'title',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Location 3',
+            'id'      => 'location3',
+            'type'    => 'text',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Address',
+            'id'      => 'address3',
+            'type'    => 'text',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'City',
+            'id'      => 'city3',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'State',
+            'id'      => 'state3',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Area Code',
+            'id'      => 'areacode3',
+            'type'    => 'text_small',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Telephone',
+            'id'      => 'tel3',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Fax',
+            'id'      => 'fax3',
+            'type'    => 'text_medium',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => 'Email',
+            'id'      => 'email3',
+            'type'    => 'text_email',
+        ) );
+
+        $siteOptions->add_field( array(
+            'name'    => '<h3>Column 3</h3>',
+            'id'      => 'column3',
+            'type'    => 'title',
         ) );
 
         $siteOptions->add_field( array(
             'name'    => 'Tagline',
             'id'      => 'tagline',
             'type'    => 'text',
-            'default' => 'A Strong Tower Construction Company',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Email',
-            'desc'    => 'Enter the primary business\'s email address',
-            'id'      => 'email',
-            'type'    => 'text_email',
-            'default' => 'address@example.com',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Phone Number',
-            'desc'    => 'Ex. (555) 555-5555',
-            'id'      => 'phone',
-            'type'    => 'text_medium',
-            'default' => '(555) 555-5555',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Fax Number',
-            'desc'    => 'Ex. (555) 555-5555',
-            'id'      => 'fax',
-            'type'    => 'text_medium',
-            'default' => '(555) 555-5555',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Site Attribution',
-            'desc'    => 'The name of the entity responsible for site content. This value is used to populate the copyright attribution notice.',
-            'id'      => 'attribution',
-            'type'    => 'text',
-            'default' => 'Koch Corporation',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Address',
-            'id'      => 'address',
-            'type'    => 'text',
-            'default' => '2303 Watterson Trail',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'City',
-            'id'      => 'city',
-            'type'    => 'text_medium',
-            'default' => 'Louisville',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'State',
-            'id'      => 'state',
-            'type'    => 'text_small',
-            'default' => 'KY',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Areacode',
-            'id'      => 'areacode',
-            'type'    => 'text_small',
-            'default' => '55555',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => '<h2>Social Media</h2>',
-            'id'      => 'social_media',
-            'type'    => 'title',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Facebook',
-            'id'      => 'facebook',
-            'type'    => 'radio_inline',
-            'options' => array(
-                'true'  => 'True',
-                'false' => 'False',
-            ),
-            'default' => 'false',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Facebook URL',
-            'id'      => 'facebook_url',
-            'type'    => 'text_url',
-            'protocols' => array( 'http', 'https', ),
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => '<hr>',
-            'id'      => 'break',
-            'type'    => 'title',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Instagram',
-            'id'      => 'instagram',
-            'type'    => 'radio_inline',
-            'options' => array(
-                'true'  => 'True',
-                'false' => 'False',
-            ),
-            'default' => 'false',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Instagram URL',
-            'id'      => 'instagram_url',
-            'type'    => 'text_url',
-            'protocols' => array( 'http', 'https', ),
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => '<hr>',
-            'id'      => 'break1',
-            'type'    => 'title',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Pinterest',
-            'id'      => 'pinterest',
-            'type'    => 'radio_inline',
-            'options' => array(
-                'true'  => 'True',
-                'false' => 'False',
-            ),
-            'default' => 'false',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Pinterest URL',
-            'id'      => 'pinterest_url',
-            'type'    => 'text_url',
-            'protocols' => array( 'http', 'https', ),
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => '<hr>',
-            'id'      => 'break2',
-            'type'    => 'title',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Twitter',
-            'id'      => 'twitter',
-            'type'    => 'radio_inline',
-            'options' => array(
-                'true'  => 'True',
-                'false' => 'False',
-            ),
-            'default' => 'false',
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => 'Twitter URL',
-            'id'      => 'twitter_url',
-            'type'    => 'text_url',
-            'protocols' => array( 'http', 'https', ),
-        ) );
-
-        $siteOptions->add_field( array(
-            'name'    => '<br>',
-            'id'      => 'break3',
-            'type'    => 'title',
+            'default' => 'In God Alone We Trust'
         ) );
     }
 
@@ -290,17 +309,17 @@ class bimg_Admin {
 }
 
 // Get it started
-$GLOBALS['bimg_Admin'] = new bimg_Admin();
-$GLOBALS['bimg_Admin']->hooks();
+$GLOBALS['bimg_Footer'] = new bimg_Footer();
+$GLOBALS['bimg_Footer']->hooks();
 
 /**
- * Helper function to get/return the bimg_Admin object
+ * Helper function to get/return the bimg_Footer object
  * @since  0.1.0
- * @return bimg_Admin object
+ * @return bimg_Footer object
  */
-function bimg_Admin() {
-    global $bimg_Admin;
-    return $bimg_Admin;
+function bimg_Footer() {
+    global $bimg_Footer;
+    return $bimg_Footer;
 }
 
 /**
@@ -309,7 +328,7 @@ function bimg_Admin() {
  * @param  string  $key Options array key
  * @return mixed        Option value
  */
-function bimg_get_option( $key = '' ) {
-    global $bimg_Admin;
-    return cmb2_get_option( $bimg_Admin->key, $key );
+function bimg_get_footer_option( $key = '' ) {
+    global $bimg_Footer;
+    return cmb2_get_option( $bimg_Footer->key, $key );
 }

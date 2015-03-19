@@ -153,6 +153,7 @@ require get_template_directory() . '/inc/cmb2.php';
  *  * Load CMB Admin Options.
  *   */
 require get_template_directory() . '/inc/theme-options-cmb.php';
+require get_template_directory() . '/inc/footer-options-cmb.php';
 
 /**
  *  * Bootstrap CMB2
