@@ -153,7 +153,7 @@ function bimg_register_about_gallery_metabox() {
 			'group_title'   => ( 'Entry {#}' ), // {#} gets replaced by row number
 			'add_button'    => ( 'Add Another Photo' ),
 			'remove_button' => ( 'Remove Entry' ),
-			'sortable'      => true, // beta
+			//'sortable'      => true, // beta
 		),
 	) );
 
