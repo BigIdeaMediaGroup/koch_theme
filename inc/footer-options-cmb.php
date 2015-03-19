@@ -146,8 +146,8 @@ class bimg_Footer {
         ) );
 
         $siteOptions->add_field( array(
-            'name'    => 'Area Code',
-            'id'      => 'areacode1',
+            'name'    => 'ZIP Code',
+            'id'      => 'zipcode1',
             'type'    => 'text_small',
         ) );
 
@@ -200,8 +200,8 @@ class bimg_Footer {
         ) );
 
         $siteOptions->add_field( array(
-            'name'    => 'Area Code',
-            'id'      => 'areacode2',
+            'name'    => 'ZIP Code',
+            'id'      => 'zipcode2',
             'type'    => 'text_small',
         ) );
 
@@ -254,8 +254,8 @@ class bimg_Footer {
         ) );
 
         $siteOptions->add_field( array(
-            'name'    => 'Area Code',
-            'id'      => 'areacode3',
+            'name'    => 'ZIP Code',
+            'id'      => 'zipcode3',
             'type'    => 'text_small',
         ) );
 
