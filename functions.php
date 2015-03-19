@@ -148,6 +148,7 @@ require get_template_directory() . '/inc/fonts.php';
  *  * Load CMB2 metaboxes.
  *   */
 require get_template_directory() . '/inc/cmb2.php';
+require get_template_directory() . '/inc/cmb2-chris.php';
 
 /**
  *  * Load CMB Admin Options.
