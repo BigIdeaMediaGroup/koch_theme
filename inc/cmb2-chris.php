@@ -150,3 +150,49 @@ function services_repeating_gallery() {
 		'repeatable' => true,
 	) );
 }
+
+
+
+/**************************************************************
+* Testimonials PAGE
+***************************************************************/
+
+add_action( 'cmb2_init', 'testimonials' );
+function testimonials() {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_testimonials_';
+
+	/**
+	 * Repeatable Field Groups
+	 */
+	$bimg_testimonials = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => __( 'Testimonial', 'cmb2' ),
+		'object_types' => array( 'page', ),
+		'show_on'      => array( 'id' => array( 28, ) ), // Specific post IDs to display this metabox
+	) );
+	
+	$bimg_testimonials->add_field( array(
+		'name'       => __( 'Endorser', 'cmb2' ),
+		'desc'    => __( 'Example: "John Doe"', 'cmb2' ),
+		'id'         => 'endorser',
+		'type'       => 'text',
+	) );	
+	
+	$bimg_testimonials->add_field( array(
+		'name'       => __( 'Endorser Position', 'cmb2' ),
+		'desc'    => __( 'Example: "Graphic Designer at New York Graphic Design"', 'cmb2' ),
+		'id'         => 'endorser_position',
+		'type'       => 'text',
+	) );
+	
+	
+	$bimg_testimonials->add_field( array(
+		'name'    => __( 'Testimonial Content', 'cmb2' ),
+		'id'      => $prefix . 'textarea',
+		'type'    => 'textarea',
+		'options' => array( 'textarea_rows' => 10, ),
+	) );
+	
+}
