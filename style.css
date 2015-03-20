@@ -998,6 +998,8 @@ h6 {
 	max-width: 117rem;
 	margin: 0 auto;
 	text-align: center;
+	padding: 0px 30px 0px 30px;
+	padding: 0 3rem 0 3rem;
 }
 
 /* 13.3 Seperator */
@@ -1047,7 +1049,6 @@ h6 {
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.63);
 	width: 100%;
-	
 }
 
 .homepage-header {
@@ -1080,6 +1081,71 @@ h6 {
 	font-weight: 400;
 }
 
+.recent-projects {
+	position: relative;
+	height: 400px;
+	height: 40rem;
+	overflow: hidden;
+}
+
+.recent-projects-background {
+	background-color: rgba(0, 0, 0, 0.63);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.recent-projects-image {
+	width: 100%;
+}
+
+.featured-service p {
+	text-align: justify;
+	hyphens: auto;
+	-moz-hyphens: auto;
+	margin: 0;
+}
+
+.homepage_blog {
+	height: 400px;
+	height: 40rem;
+	background-color: grey;
+	margin-bottom: 100px;
+	margin-bottom: 10rem;
+}
+
+.twitter {
+	height: 400px;
+	height: 40rem;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	
+}
+
+.twitter .twitter-image {
+	width: 100%;
+}
+
+.twitter-content {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.twitter i {
+	margin-top: 30px;
+	margin-top	3rem;
+}
+
+.twitter p {
+	font-size: 30px;
+}
+
+
+
 
 /* 13.7 Header */
 .site-header {
@@ -1090,6 +1156,34 @@ h6 {
 	height: 50%;
 	background-color: #b20838;
 }
+
+.top-half .site-width {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	text-align: right;
+	width: 100%;
+}
+
+.social-icons .fa {
+	color: white;
+	margin: 0px 5px 0px 5px;
+	margin: 0px .5rem 0px .5rem;
+	
+}
+
+.social-icons .fa:hover {
+	color: #004890;
+}
+
+
+.social-icons {
+	display: inline-block;
+	align-items: center;
+	width: 100%;
+}
+
+
 .bottom-half {
 	width: 100%;
 	display: flex;
@@ -1100,14 +1194,12 @@ h6 {
 
 .main-navigation {
 	float: none;
-	
 }
 
 .main-navigation .menu {
 	float: right;
 	font-weight: 400;
 	text-transform: uppercase;
-
 }
 
 .logo
@@ -1121,17 +1213,7 @@ h6 {
 	position: relative;
 }
 
-.social-icons .fa {
-	color: white;
-	float:right;
-	margin: 0px 10px 0px 10px;
-	margin: 0px 1rem 0px 1rem;
-}
 
-
-.social-icons .fa:hover {
-	color: #004890;
-}
 
 
 
