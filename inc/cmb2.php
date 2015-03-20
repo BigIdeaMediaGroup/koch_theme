@@ -1,16 +1,4 @@
 <?php
-/**
- * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB directory)
- *
- * Be sure to replace all instances of 'bimg_' with your project's prefix.
- * http://nacin.com/2010/05/11/in-wordpress-prefix-everything/
- *
- * @category YourThemeOrPlugin
- * @package  Metaboxes
- * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
- * @link     https://github.com/WebDevStudios/CMB2
- */
-
 /*
  * Home Page
  */
@@ -88,9 +76,9 @@ function bimg_register_home_service_highlight_metabox() {
 		'id'   => $prefix . 'link',
 		'type' => 'select',
 		'options' => array(
-	        'page-slug-1' => 'Page One',
-	        'page-slug-2'   => 'Page Two',
-	        'page-slug-3'     => 'Page Three',
+			'page-slug-1' => 'Page One',
+			'page-slug-2'   => 'Page Two',
+			'page-slug-3'     => 'Page Three',
 		),
 		'default' => 'page-slug-1',
 	) );
@@ -159,30 +147,30 @@ function bimg_register_about_gallery_metabox() {
 			'group_title'   => ( 'Entry {#}' ), // {#} gets replaced by row number
 			'add_button'    => ( 'Add Another Photo' ),
 			'remove_button' => ( 'Remove Entry' ),
-			//'sortable'      => true, // beta
+			'sortable'      => true, // beta
 		),
 	) );
 
-	/**
-	 * Group fields works the same, except ids only need
-	 * to be unique to the group. Prefix is not needed.
-	 *
-	 * The parent field's id needs to be passed as the first argument.
-	 */
-	$bimg_about_gallery->add_group_field( $bimg_about_gallery_group, array(
-		'name'       => ( 'Image Title' ),
-		'id'         => 'title',
-		'type'       => 'text',
-		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
-	) );
-	
-	$bimg_about_gallery->add_group_field( $bimg_about_gallery_group, array(
-		'name'       => ( 'Image' ),
-		'id'         => 'image',
-		'type'       => 'file',
-		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
-	) );
-	
+			/**
+			 * Group fields works the same, except ids only need
+			 * to be unique to the group. Prefix is not needed.
+			 *
+			 * The parent field's id needs to be passed as the first argument.
+			 */
+			$bimg_about_gallery->add_group_field( $bimg_about_gallery_group, array(
+				'name'       => ( 'Image Title' ),
+				'id'         => 'title',
+				'type'       => 'text',
+				// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+			) );
+
+			$bimg_about_gallery->add_group_field( $bimg_about_gallery_group, array(
+				'name'       => ( 'Image' ),
+				'id'         => 'image',
+				'type'       => 'file',
+				// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
+			) );
+
 }
 
 add_action( 'cmb2_init', 'bimg_register_about_minorities_metabox' );
@@ -198,25 +186,25 @@ function bimg_register_about_minorities_metabox() {
 		'show_names'   => true, // Show field names on the left
 		'show_on'      => array( 'id' => array( 1904, ) ), // Specific post IDs to display this metabox
 	) );
-	
+
 	$bimg_about_minorities->add_field( array(
 		'name' => 'Summary',
 		'id'   => $prefix . 'summary',
 		'type' => 'textarea',
 	) );
-	
+
 	$bimg_about_minorities->add_field( array(
 		'name' => 'Minorities',
 		'id'   => $prefix . 'minorities',
 		'type' => 'text',
 		'repeatable' => true,
 	) );
-	
+
 	$bimg_about_minorities->add_field( array(
 		'name' => 'NAICS Codes',
 		'id'   => $prefix . 'codes',
 		'type' => 'text',
 		'repeatable' => true,
 	) );
-	
+
 }
