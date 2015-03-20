@@ -36,21 +36,28 @@ get_header(); ?>
 			    	<hgroup class = "site-width text-white">
 						<h2>Our Recent Projects</h2>
 			    	</hgroup>
+					<div class="site-width text-white testimonial-slider">
+			    	<!-- CODE FOR TESTIMONIALS SLIDER HERE -->
 		    	</div>
 			    
 		    </section>
 		    
-		    <section class="featured-service">
+		    <section class="featured-service site-width">
 			    <h2><?php echo get_post_meta( $post->ID, '_bimg_home_service_highlight_title', true ); ?></h2>
 			    <div class="section group">
 				    <div class="col span_1_of_2">
 					    <img src="<?php echo get_post_meta( $post->ID, '_bimg_home_service_highlight_image', true ); ?>">
 				    </div>
 				    <div class="col span_1_of_2">
+					    <p>
 					    <?php echo get_post_meta( $post->ID, '_bimg_home_service_highlight_description', true ); ?>
+					    </p>
 				    </div>
 			    </div>
-			    <hr>
+			    <hr class="separator">
+		    </section>
+		    
+		    <section class="homepage_blog site-width">
 			    <div class="section group">
 				    <div class="col span_2_of_3">
 					    Recent Blog Posts
@@ -60,9 +67,16 @@ get_header(); ?>
 					</div>
 			    </div>
 		    </section>
+		   
 		    
 		    <section class="twitter">
-			    Twitter
+			    <img class="twitter-image" src="<?php echo get_site_url(); ?>/wp-content/themes/koch_theme/img/lower_image.jpg">
+			    <div class="twitter-content"> 
+				    <div class ="text-white site-width">
+				    <i class= "fa fa-twitter fa-5x"></i>
+					<p> tweet tweet tweet tweet tweet tweet tweet </p>
+			    </div>
+			    </div>
 		    </section>
 		    
 		    <section class="clients">
