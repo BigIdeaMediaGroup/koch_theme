@@ -1047,7 +1047,6 @@ h6 {
 	position: absolute;
 	background-color: rgba(0, 0, 0, 0.63);
 	width: 100%;
-	
 }
 
 .homepage-header {
@@ -1080,6 +1079,25 @@ h6 {
 	font-weight: 400;
 }
 
+.recent-projects {
+	position: relative;
+	height: 400px;
+	height: 40rem;
+	overflow: hidden;
+}
+
+.recent-projects-background {
+	background-color: rgba(0, 0, 0, 0.63);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.recent-projects-image {
+	width: 100%;
+	background-size: contain;
+}
 
 /* 13.7 Header */
 .site-header {
@@ -1123,14 +1141,20 @@ h6 {
 
 .social-icons .fa {
 	color: white;
-	float:right;
-	margin: 0px 10px 0px 10px;
-	margin: 0px 1rem 0px 1rem;
+	margin: 0px 5px 0px 5px;
+	margin: 0px .5rem 0px .5rem;
+	float: right;
+	
 }
-
 
 .social-icons .fa:hover {
 	color: #004890;
+}
+
+.contact-top {
+	display: flex;
+	align-items: center;
+	height: 50%;
 }
 
 

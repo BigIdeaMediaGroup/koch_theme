@@ -95,7 +95,7 @@ function bimg_register_home_service_highlight_metabox() {
 		'default' => 'page-slug-1',
 	) );
 }
-
+/* ABOUT PAGE */
 add_action( 'cmb2_init', 'bimg_register_about_description_metabox' );
 function bimg_register_about_description_metabox() {
 	$prefix = '_bimg_about_description_';

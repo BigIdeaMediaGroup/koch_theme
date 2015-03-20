@@ -26,11 +26,12 @@
 			<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="logo" src="<?php echo get_site_url(); ?>/wp-content/themes/koch_theme/img/logo.png"></a>
 		</div><!-- .site-branding -->
 		<div class="top-half">
+		<div class="contact-top site-width"
 			<div itemscope itemtype="http://schema.org/Organization" class="site-contact">
 			<span itemprop="name" class="display-none"><?php echo bimg_get_option( 'company' ); ?></span>
 			<span itemprop="email"><a href="mailto:<?php echo bimg_get_option( 'email' ); ?>"><?php echo bimg_get_option( 'email' ); ?></a></span>
 			<span itemprop="telephone"><?php echo bimg_get_option( 'phone' ); ?></span>
-    	</div><!-- .site-contact -->
+			</div><!-- .site-contact -->
 			<div class="social-icons site-width">
 			<?php
 			$social_media = array( 'facebook', 'instagram', 'linkedin', 'pinterest', 'twitter', );
@@ -40,7 +41,11 @@
 				}
 			}
 			?>
+			
+			
     		</div><!-- .social-icons -->
+		</div>
+	
 		</div>
 		
 		<div class="bottom-half">

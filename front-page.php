@@ -31,7 +31,13 @@ get_header(); ?>
 		    </section>
 		    
 		    <section class="recent-projects">
-			    <h2>Our Recent Projects</h2>
+			    <img class="recent-projects-image" src="<?php echo get_site_url(); ?>/wp-content/themes/koch_theme/img/middle_image.jpg">
+		    	<div class="recent-projects-background">
+			    	<hgroup class = "site-width text-white">
+						<h2>Our Recent Projects</h2>
+			    	</hgroup>
+		    	</div>
+			    
 		    </section>
 		    
 		    <section class="featured-service">
